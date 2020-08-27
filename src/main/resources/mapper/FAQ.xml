@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mysh.shareHouse.repository.FaqRepository">
+ 
+ 	<select id="moveInFindAll" resultType="com.mysh.shareHouse.model.Faq">
+ 		SELECT ID, TYPE, TITLE, CONTENT, CREATE_DATE FROM FAQ WHERE TYPE = '입주'
+ 	</select>
+ 	
+ 	<select id="contractFindAll" resultType="com.mysh.shareHouse.model.Faq">
+ 		SELECT ID, TYPE, TITLE, CONTENT, CREATE_DATE FROM FAQ WHERE TYPE = '계약'
+ 	</select>
+ 	
+</mapper>
